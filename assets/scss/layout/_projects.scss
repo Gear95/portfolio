@@ -74,13 +74,13 @@ height: 100%;
             transition: background map-get($transitions, background);
 
             &.frontend {
-                background-image: url("/assets/img/front-end_project.jpg");
+                background-image: url("assets/img/front-end_project.jpg");
                 background-size: cover;
                 background-repeat: no-repeat;
             }
 
             &.backend {
-                background-image: url("/assets/img/back-end_project.jpg");
+                background-image: url("assets/img/back-end_project.jpg");
                 background-size: cover;
                 background-repeat: no-repeat;
             }
@@ -165,8 +165,6 @@ height: 100%;
 #projects {
 scroll-margin: 25vh;
 }
-
-
 
 @media (max-width: 767px) {
     .projects {
