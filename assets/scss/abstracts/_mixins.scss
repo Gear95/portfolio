@@ -1,0 +1,89 @@
+@mixin nav-hover($hover-color: map-get($colors, hover), $hover-transition: map-get($transitions, hover)) {
+  &::after {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: $hover-color;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform $hover-transition;
+  }
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+@mixin title {
+  font-size: map-get($fonts, large);
+  justify-content: center;
+  align-items: center;
+  text-align:center;
+  padding: 1rem;
+
+  h3 {
+      letter-spacing: 0.1rem;
+      text-transform: capitalize;
+      color: map-get($colors, blue-dark);
+  }
+
+  span {
+      @include point;
+  }
+}
+
+@mixin button(
+  $bg-color: map-get($colors, blue-dark), 
+  $text-color: map-get($colors, green), 
+  $padding: 12px 20px,
+  $font-size: map-get($sizes, small),
+  $border-radius: 15px,
+  $letter-spacing: .15rem
+) {
+  width: auto;
+  padding: $padding;
+  border: none;
+  border-radius: $border-radius;
+  position: relative;
+  background: $bg-color;
+  box-shadow: 0 0 5px $text-color;
+  color: $text-color;
+  font-size: $font-size;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: $letter-spacing;
+  animation: shake 150ms 2 linear;
+  transition: color 0.5s;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $bg-color;
+    z-index: -1;
+    transition: transform 0.4s ease;
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+
+  &:hover {
+    color: map-get($colors, white);
+    box-shadow: 0 0 5px map-get($colors, white);
+  }
+}
+
+@mixin point {
+  color: map-get($colors, green);
+  padding-right: 10px;
+}
+
+@mixin main-container {
+  max-width: 1600px;
+}

@@ -1,0 +1,116 @@
+.education {
+    height: auto;
+    background-color: white;
+
+    &__container {
+        max-width: 112.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+
+        &__title {
+            @include title
+        }
+
+        &__timeline-items {
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            width: 50%;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 0.3rem;
+                height: 100%;
+                background-color: #f1f1f1;
+            }
+
+            &__item {
+                margin-bottom: 2.5rem;
+                width: 100%;
+                position: relative;
+
+                &__dot {
+                    height: 1.3rem;
+                    width: 1.3rem;
+                    margin-left: -2px;
+                    background-color: map-get($colors, green);
+                    box-shadow: 0 0 1.5rem map-get($colors, green),
+                                0 0 3rem map-get($colors, green);
+                    position: absolute;
+                    left: calc(50% - 0.5rem);
+                    border-radius: 50%;
+                    top: 0.625rem;
+                }
+
+                &__date {
+                    font-size: 1rem;
+                    font-weight: 700;
+                    margin: 1rem 0 0.9375rem;
+                }
+
+                &__content {
+                    color: map-get($colors, white);
+                    background: map-get($colors, blue-dark);
+                    padding: 1.875rem 3.125rem;
+                    border: 0.1875rem solid map-get($colors, green);
+                    box-shadow: 0 0 1.5rem map-get($colors, green);
+                    border-radius: .9375rem;
+                    cursor: pointer;
+
+                    h3 {
+                        font-size: 1rem;
+                        color: map-get($colors, white);
+                        margin: 0.9375rem 0 0.625rem;
+                        font-weight: 400;
+
+                        a {
+                            color: map-get($colors, green);
+                            text-decoration: underline;
+                        }
+                    }
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                &:nth-child(odd) {
+                    padding-right: calc(50% + 1.875rem);
+                    text-align: right;
+                }
+
+                &:nth-child(even) {
+                    padding-left: calc(50% + 1.875rem);
+                    text-align: left;
+                }
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+}
+
+
+#education {
+    scroll-margin: 2vh;
+}
+
+
+@media (max-width: 767px) {
+    .education {
+        &__container {
+            &__timeline-items {
+                width: 90%;
+            }
+        }
+    }
+}

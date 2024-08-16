@@ -1,0 +1,32 @@
+$colors: (
+  white: #fff,
+  green: #1FA285,
+  blue-dark: #132D46,
+  black: rgb(35, 37, 40),
+  hover: #1FA285,
+  background-gradient: linear-gradient(165deg, rgb(35, 37, 40) 30%, #132D46 50%, #1FA285 85%),
+);
+
+$sizes: (
+  card-width: calc(33% - 1rem),
+);
+
+$transitions: (
+  border: 0.6s,
+  background: 1.2s,
+  opacity: 0.6s,
+  hover: 0.9s,
+  icon-opacity: 0.6s,
+  heading-delay: 0.6s,
+);
+
+$fonts: (
+  base: ('Brandon Grotesque', sans-serif),
+  heading: ("sans-serif", cursive),
+  small: 1.325rem,
+  medium: 2.225rem,
+  large: 2.825rem,
+  weight-small: 400,
+  weight-medium: 600,
+  weight-large: 800,
+);

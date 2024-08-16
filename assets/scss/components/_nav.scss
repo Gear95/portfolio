@@ -1,0 +1,94 @@
+// Navigation
+.nav {
+  background-color: map-get($colors, black);
+  padding: .625rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  &__container {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: map-get($fonts, small);
+    
+
+    &__text-ul {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-start;
+      list-style: none;
+      margin: 0 0.8rem 0 0;
+
+      li {
+        display: inline-block;
+        
+        a {
+          text-decoration: none;
+
+          i {
+            margin: .8rem;
+            letter-spacing: .1rem;
+            text-transform: capitalize;
+            white-space: nowrap;
+            color: map-get($colors, green);
+            position: relative;
+
+            p{
+              display: inline;
+              margin-left: .4rem;
+              color: map-get($colors, white);
+            }
+            @include nav-hover;
+          }              
+          
+          &:hover {
+            i{
+              color: map-get($colors, white )
+            }
+            p{
+            color: map-get($colors, green);
+            }
+          }
+        }
+      }
+    }
+
+    &__social {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      list-style: none;
+      padding: 0;
+      margin: 0 .8rem;
+
+      li {
+        align-items: end;
+        display: inline-block;
+        margin: 0 .8rem;
+
+        i {
+          color: map-get($colors, white);
+
+          &:hover {
+            color: map-get($colors, green);
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    li a i p {
+      display: none;
+      visibility: hidden;
+      position: absolute;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+    }
+  }
+}

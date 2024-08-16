@@ -1,0 +1,44 @@
+/* _reset.scss */
+
+html, 
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 80%;
+    font-family: map-get($fonts, base);
+    vertical-align: baseline;
+    list-style: none;
+    vertical-align: baseline;
+    background: map-get($colors, white);
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+*, 
+*::before, 
+*::after{
+    box-sizing: border-box;
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+    animation: fade-in linear both;
+    animation-timeline: view();
+    animation-range: entry 30% cover 35%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+@media (max-width: 767px) {
+    section {
+        height: auto;
+        animation-range: entry 10% cover 25%;
+    }
+}
