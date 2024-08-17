@@ -18,8 +18,6 @@ This portfolio showcases my works as a Junior Web Developer. It includes informa
 
 Check out the live demo of the portfolio: [Andrea's Portfolio](https://gear95.github.io/portfolio)
 
-Check out my presentation of this project: [Andrea's Portolio PDF presentation](https://gear95.github.io/portfolio/)
-
 ## Features
 
 - Responsive design
