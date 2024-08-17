@@ -40,7 +40,7 @@
 
           .input-row {
             display: flex;
-            gap: 1rem;  // Spazio tra i due campi
+            gap: 1rem;
 
             input {
               width: 100%;
@@ -98,7 +98,7 @@
     }
 
     .forms__container__contact__form__box .input-row {
-      flex-direction: column; // Cambia layout in colonna su schermi piccoli
+      flex-direction: column;
     }
   }
 }
